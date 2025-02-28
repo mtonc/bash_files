@@ -1,0 +1,24 @@
+[user]
+	email = m.tonchick@gmail.com
+	name = mtonc
+[pull]
+	rebase = true
+[alias "basic"]
+	a = "add -A ."
+	ca = commit --amend
+	cm = commit -m
+	co = checkout
+	pl = pull origin
+	ps = push origin
+	pu = push -u origin
+	s = status -f
+[alias "stash"]
+	sc = stash clear
+	sl = stash list
+	sp = stash pop
+	ss = stash save
+	st = stash
+[alias "resets"]
+	hr = reset --hard
+	un = reset --
+	
