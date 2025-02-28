@@ -1,0 +1,56 @@
+format = """
+$username\
+$hostname\
+$shlevel\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$docker_context\
+$package\
+$nodejs\
+$php\
+$python\
+$vagrant\
+$line_break\
+$battery\
+$time\
+$character"""
+
+[username]
+show_always = true
+
+[character]
+success_symbol = "[🛸](bold green)"
+error_symbol = "[💥](bold red)"
+
+[time]
+disabled = false
+time_format = '[%a %d, %H:%M]'
+style = "bold purple"
+format = " at [$time]($style) "
+
+[battery]
+charging_symbol = "🔌 "
+discharging_symbol = "⚡️"
+format = "[$symbol $percentage]($style)"
+disabled = false
+
+	[[battery.display]]
+	threshold = 10
+	style = "bold bright-red"
+
+	[[battery.display]]
+	threshold = 30
+	style = "bold yellow"
+
+	[[battery.display]]
+	threshold = 100
+	style = "bold green"
+
+[php]
+format = "via [🐘 $version](147 bold) "
+
+[docker_context]
+format = "via [🐋 $context](blue bold)"
